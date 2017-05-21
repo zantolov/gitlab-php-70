@@ -2,9 +2,6 @@ FROM php:7.0
 
 MAINTAINER Zoran Antolovic <zoran.antolovic.os@gmail.com>
 
-# We need to install dependencies only for Docker
-RUN '[[ ! -e /.dockerenv ]] && exit 0'
-
 RUN set -xe
 
 # Install git (the php image doesn't have it) which is required by composer
