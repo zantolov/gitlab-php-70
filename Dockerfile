@@ -18,4 +18,6 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 
 # Add non-root user
 RUN useradd user
+RUN mkdir /home/user
+RUN chown user:user /home/user -R
 USER user
