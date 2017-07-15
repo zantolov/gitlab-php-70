@@ -15,3 +15,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Here you can install any other extension that you need
 RUN docker-php-ext-install pdo_mysql zip xml pcntl
 RUN pecl install xdebug && docker-php-ext-enable xdebug
+
+# Add non-root user
+RUN useradd user
