@@ -18,3 +18,4 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 
 # Add non-root user
 RUN useradd user
+USER user
